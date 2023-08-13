@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Countdown from 'components/Countdown';
 import { members } from 'members/data';
 import styles from './page.module.css';
 
@@ -9,6 +10,9 @@ import styles from './page.module.css';
 // 4 Смешной курсор
 // 5 daisy ui?
 // 6 Картинки венков, картинки мои и даши
+// план дня
+// карта
+// навигация по якорям в хедере
 
 export default function Home() {
   return (
@@ -20,6 +24,7 @@ export default function Home() {
 
       <h1 className="text-3xl font-bold">Приглашаем на свадьбу</h1>
       <h2>Алексей и Дарья</h2>
+      <Countdown />
 
       <Image
         className={styles.logo}
