@@ -20,6 +20,9 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "Свадьба Алексея и Дарьи",
   description: "Приглашение на свадьбу",
+  icons: {
+    icon: "./favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

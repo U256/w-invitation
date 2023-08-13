@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "clsx": "^2.0.0",
+    "dayjs": "^1.11.9",
     "next": "13.4.13",
     "react": "18.2.0",
+    "react-countdown": "^2.3.5",
     "react-dom": "18.2.0",
     "typescript": "5.1.6"
   },
