@@ -1,9 +1,20 @@
 import './normalize.css';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Handjet, Jost, Caveat } from 'next/font/google';
+import clsx from 'clsx';
 
-const inter = Inter({ subsets: ['latin'] });
+const jost = Jost({ variable: '--font-main', subsets: ['cyrillic', 'latin'] });
+const handjet = Handjet({
+  variable: '--font-pixel',
+  weight: ['400'],
+  subsets: ['cyrillic', 'latin'],
+});
+const caveat = Caveat({
+  variable: '--font-handwritten',
+  weight: ['500'],
+  subsets: ['cyrillic', 'latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Свадьба Алексея и Дарьи',
@@ -17,7 +28,37 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={clsx(
+          jost.className,
+          jost.variable,
+          caveat.variable,
+          handjet.variable
+        )}
+      >
+        <div style={{ padding: 50, fontSize: 28 }}>
+          <p className={jost.className}>
+            jost
+            <br />
+            Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас.
+            friendship000
+          </p>
+          <br />
+          <p style={{ fontFamily: 'var(--font-pixel)' }}>
+            handjet
+            <br /> Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас.
+            friendship000
+          </p>
+          <br />
+          <p style={{ fontFamily: 'var(--font-handwritten)' }}>
+            caveat
+            <br />
+            Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас.
+            friendship000
+          </p>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
