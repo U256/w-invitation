@@ -1,15 +1,16 @@
-import Image from 'next/image';
-import Countdown from 'components/Countdown';
-import { members } from 'members/data';
-import styles from './page.module.css';
+import Image from "next/image";
+import { Countdown } from "components/Countdown";
+import { members } from "members/data";
+import styles from "./page.module.css";
 
 // TODO:
+// 2 шрифт++
+// 3 палитра цветов +++
+// 6 Картинки венков, картинки мои и даши ++
+
 // 1 обратный отсчет?
-// 2 шрифт
-// 3 палитра цветов (сайта и одежды) +++
 // 4 Смешной курсор
 // 5 daisy ui?
-// 6 Картинки венков, картинки мои и даши
 // план дня
 // карта
 // навигация по якорям в хедере
@@ -18,11 +19,6 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <p className="left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-        Get started by editing&nbsp;
-        <code className="font-mono font-bold">app/page.tsx</code>
-      </p>
-
       <h1 className="text-3xl font-bold">Приглашаем на свадьбу</h1>
       <h2>
         Алексей
@@ -30,15 +26,33 @@ export default function Home() {
         Дарья
       </h2>
       <Countdown />
-
-      <Image
-        className={styles.logo}
-        src="/next.svg"
-        alt="Next.js Logo"
-        width={180}
-        height={37}
-        priority
-      />
+      <div style={{ padding: 50, background: "gray", fontSize: 26 }}>
+        <div style={{ border: "5px solid var(--clr-background)", color: "var(--clr-background)" }}>clr-background</div>
+        <div style={{ border: "5px solid var(--clr-foreground)", color: "var(--clr-foreground)" }}>clr-foreground</div>
+        <div style={{ border: "5px solid var(--clr-accent)", color: "var(--clr-accent)" }}>clr-accent</div>
+        <div style={{ border: "5px solid var(--clr-content)", color: "var(--clr-content)" }}> clr-content</div>
+        <div style={{ border: "5px solid var(--clr-content-sub", color: "var(--clr-content-sub)" }}>
+          clr-content-sub
+        </div>
+      </div>
+      <div style={{ padding: 50 }}>
+        <p>
+          jost
+          <br />
+          Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас. friendship000
+        </p>
+        <br />
+        <p style={{ fontFamily: "var(--font-pixel)" }}>
+          handjet
+          <br /> Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас. friendship000
+        </p>
+        <br />
+        <p style={{ fontFamily: "var(--font-handwritten)" }}>
+          caveat
+          <br />
+          Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас. friendship000
+        </p>
+      </div>
     </main>
   );
 }
