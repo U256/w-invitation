@@ -1,5 +1,4 @@
-import { members } from "members/data";
-import { Hero } from "components/Hero";
+import { Contacts } from "components/Contacts";
 import styles from "./page.module.css";
 
 // TODO:
@@ -11,39 +10,17 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Hero />
-
-      <section id="faq">Ответы на вопросы</section>
-      <section id="plan">Программа</section>
-      <section id="schedule">Карты</section>
-      <section id="contacts">Контакты</section>
-      <div style={{ padding: 50, background: "gray", fontSize: 26 }}>
-        <div style={{ border: "5px solid var(--clr-background)", color: "var(--clr-background)" }}>clr-background</div>
-        <div style={{ border: "5px solid var(--clr-foreground)", color: "var(--clr-foreground)" }}>clr-foreground</div>
-        <div style={{ border: "5px solid var(--clr-accent)", color: "var(--clr-accent)" }}>clr-accent</div>
-        <div style={{ border: "5px solid var(--clr-content)", color: "var(--clr-content)" }}> clr-content</div>
-        <div style={{ border: "5px solid var(--clr-content-sub)", color: "var(--clr-content-sub)" }}>
-          clr-content-sub
-        </div>
-      </div>
-      <div style={{ padding: 50 }}>
-        <p>
-          jost
-          <br />
-          Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас. friendship000
-        </p>
+      <h1 className="text-7xl f-pixel">Упс</h1>
+      <p className="text-2xl f-pixel">эти программисты опять накосячили</p>
+      <p className="mt-3">На этой странице ничего нет 🥺</p>
+      <br />
+      <p className="text-center mt-3">
+        {/* TODO: по юзеру решать, вам или тебе */}
+        Вам нужно использовать
         <br />
-        <p style={{ fontFamily: "var(--font-pixel)" }}>
-          handjet
-          <br /> Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас. friendship000
-        </p>
-        <br />
-        <p style={{ fontFamily: "var(--font-handwritten)" }}>
-          caveat
-          <br />
-          Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас. friendship000
-        </p>
-      </div>
+        ссылку-приглашение
+      </p>
+      <Contacts forWho="stranger" title="или написать нам:" className="mt-3" />
     </main>
   );
 }
