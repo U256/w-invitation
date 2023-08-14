@@ -1,0 +1,15 @@
+.two-columns-grid {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+.two-columns-grid:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  background-color: var(--clr-content-sub);
+}

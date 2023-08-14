@@ -11,6 +11,17 @@
   --clr-accent: hsl(38, 81%, 50%);
   --clr-content: hsl(106, 19%, 23%);
   --clr-content-sub: hsl(108, 7%, 39%);
+
+  --header-height: 50px;
+  --gutter: 30px;
+
+  @media (max-width: 800px) {
+    --gutter: 16px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -32,4 +43,16 @@ body {
 }
 .f-handwritten {
   font-family: var(--font-handwritten);
+}
+
+.block-section {
+  text-align: center;
+  margin: calc(var(--header-height) + 16px) auto 0;
+  width: 800px;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 }
