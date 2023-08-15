@@ -1,5 +1,4 @@
 import { Contacts } from "components/Contacts";
-// import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -10,13 +9,12 @@ export default function Home() {
         <p className="mt-3">На этой странице ничего нет 🥺</p>
         <br />
         <p className="text-center mt-3">
-          {/* TODO: по юзеру решать, вам или тебе */}
           Вам нужно использовать
           <br />
           ссылку-приглашение
         </p>
       </section>
-      <Contacts forWho="stranger" title="или написать нам" />
+      <Contacts showMinimal title="или написать нам" />
     </main>
   );
 }

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import clsx from "clsx";
 import { Handjet, Jost, Caveat } from "next/font/google";
 import { Header } from "components/Header";
+import { Countdown } from "components/Countdown";
 
 const jost = Jost({ variable: "--font-main", subsets: ["cyrillic", "latin"] });
 const handjet = Handjet({
@@ -31,6 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={clsx(jost.className, jost.variable, caveat.variable, handjet.variable)}>
         <Header />
         {children}
+        <footer className="fixed w-full flex justify-center bottom-0 left-0 border-t bg-inherit z-10">
+          <Countdown />
+        </footer>
       </body>
     </html>
   );

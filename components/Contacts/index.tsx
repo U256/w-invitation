@@ -1,26 +1,36 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
-import styles from "./styles.module.css";
+import { InfoColumns } from "components/InfoColumns";
+import { List } from "./List";
+import { ALEXEY_CONTACTS, DARYA_CONTACTS } from "config";
 
 interface Props {
-  forWho: "stranger" | "member";
   title?: ReactNode;
   className?: string;
+  showMinimal?: boolean;
 }
 
-export function Contacts({ forWho, className, title }: Props) {
+export function Contacts({ showMinimal, className, title }: Props) {
   return (
-    <section id="contacts" className={clsx("flex flex-col block-section", className)}>
-      {title && <p className="text-2xl text-center">{title}</p>}
-      <div className={styles["two-columns-grid"]}>
-        <div>
-          <p>Дарья:</p>
-        </div>
-        <div>
-          <p>Алексей:</p>
-        </div>
-      </div>
-      {/* {forWho} */}
-    </section>
+    <InfoColumns
+      title={title}
+      className={className}
+      contentLeft={
+        <List
+          who="Алексей"
+          wa={ALEXEY_CONTACTS.wa}
+          tg={showMinimal ? "" : ALEXEY_CONTACTS.tg}
+          phone={showMinimal ? "" : ALEXEY_CONTACTS.phone}
+        />
+      }
+      contentRight={
+        <List
+          who="Дарья"
+          wa={DARYA_CONTACTS.wa}
+          tg={showMinimal ? "" : DARYA_CONTACTS.tg}
+          phone={showMinimal ? "" : DARYA_CONTACTS.phone}
+        />
+      }
+    />
   );
 }

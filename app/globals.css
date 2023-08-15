@@ -12,11 +12,14 @@
   --clr-content: hsl(106, 19%, 23%);
   --clr-content-sub: hsl(108, 7%, 39%);
 
-  --header-height: 50px;
-  --gutter: 30px;
+  --header-height: 80px;
+  --gutter: 16px;
+  font-size: 14px;
 
-  @media (max-width: 800px) {
-    --gutter: 16px;
+  @media (min-width: 768px) {
+    --header-height: 50px;
+    --gutter: 30px;
+    font-size: 16px;
   }
 }
 
@@ -47,12 +50,11 @@ body {
 
 .block-section {
   text-align: center;
-  margin: calc(var(--header-height) + 16px) auto 0;
-  width: 800px;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+  margin: 0 auto;
+  padding: calc(var(--header-height) + 6px) var(--gutter) 0;
+  width: 100%;
 
-  @media (max-width: 800px) {
-    width: 100%;
+  @media (min-width: 576px) {
+    width: 550px;
   }
 }

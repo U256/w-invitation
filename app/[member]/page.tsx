@@ -1,9 +1,11 @@
+import clsx from "clsx";
 import { Hero } from "components/Hero";
 import { members } from "members/data";
-import styles from "./page.module.css";
-import { Countdown } from "components/Countdown";
 import { Contacts } from "components/Contacts";
-import clsx from "clsx";
+import { FinalQuirk } from "components/FinalQuirk";
+import styles from "./page.module.css";
+import dayjs from "dayjs";
+import { DATE } from "config";
 
 interface Props {
   params: {
@@ -11,20 +13,30 @@ interface Props {
   };
 }
 
+// TODO:
+// картинки мои и даши
+// уникальные приветствия
+// emojis
+
 export default function Main({ params }: Props) {
   return (
     <main className={clsx("flex flex-col justify-between align-middle", styles.main)}>
       <Hero />
-      <Countdown />
 
-      <Contacts forWho="member" title="Контакты" />
+      {/* Story */}
+      <section className="mt-10 py-2 border block-section">
+        <p>Пять лет назад началась наша история</p>
+        {/* TODO: Продолжить */}
+        <p className="">&#129302;</p>
+      </section>
+
+      <Contacts title="Контакты" />
       {/* get rid of it */}
       <p className="mt-11 mb-6 border-2 p-3">{params.member}</p>
 
       <section id="faq">Ответы на вопросы</section>
       <section id="plan">Программа</section>
       <section id="schedule">Карты</section>
-      
 
       <br />
       <div className="block-section w-3" style={{ padding: 50, background: "gray", fontSize: 26 }}>
@@ -54,6 +66,7 @@ export default function Main({ params }: Props) {
           Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас. friendship000
         </p>
       </div>
+      <FinalQuirk category="coeval" />
     </main>
   );
 }
