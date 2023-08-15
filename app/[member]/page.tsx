@@ -25,10 +25,12 @@ export default function Main({ params }: Props) {
       <Hero />
 
       {/* Story - standalone component */}
-      <section className="mt-10 py-2 border block-section">
-        <p>Пять лет назад началась наша история</p>
-        {/* TODO: Продолжить */}
-        <p className="">&#129302;</p>
+      <section className="block-section">
+        <div className="border">
+          <p>Пять лет назад началась наша история</p>
+          {/* TODO: Продолжить */}
+          <p className="">&#129302;</p>
+        </div>
       </section>
 
       <Contacts title="Контакты" />
@@ -36,7 +38,6 @@ export default function Main({ params }: Props) {
       <p className="mt-11 mb-6 border-2 p-3">{params.member}</p>
 
       <section id="faq">Ответы на вопросы</section>
-      <section id="plan">Программа</section>
       <section id="schedule">Карты</section>
 
       <br />
