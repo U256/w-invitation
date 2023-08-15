@@ -14,6 +14,7 @@ interface Props {
 }
 
 // TODO:
+// replace font with smth more fun
 // картинки мои и даши
 // уникальные приветствия
 // emojis
@@ -23,7 +24,7 @@ export default function Main({ params }: Props) {
     <main className={clsx("flex flex-col justify-between align-middle", styles.main)}>
       <Hero />
 
-      {/* Story */}
+      {/* Story - standalone component */}
       <section className="mt-10 py-2 border block-section">
         <p>Пять лет назад началась наша история</p>
         {/* TODO: Продолжить */}

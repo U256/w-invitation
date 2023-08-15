@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import ru from "dayjs/locale/ru";
 import { DATE } from "config";
 import styles from "./styles.module.css";
+import { InfoColumns } from "components/InfoColumns";
 
 dayjs.locale(ru);
 
@@ -23,7 +24,7 @@ export function Hero() {
         <span className={clsx("block divider", styles.divider)}>и</span>
         <span>Дарья</span>
       </h2>
-
+      {/* <InfoColumns />  */}
       <p className="mt-10 text-2xl font-semibold">{dayjs(DATE).format("DD MMMM YYYY")}</p>
     </div>
   );

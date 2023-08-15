@@ -1,5 +1,4 @@
-import grape2 from "public/images/grape2.svg";
-import dayjs from "dayjs";
+import grape2 from "public/images/grape2.svg?url";
 import Image from "next/image";
 import { getPath } from "helpers/getPath";
 import { TimeOfDay } from "components/TimeOfDay";

@@ -27,6 +27,26 @@ html {
   scroll-behavior: smooth;
 }
 
+a,
+button {
+  outline: none;
+  transition: opacity 150ms, transform 300ms;
+}
+a:hover,
+button:hover,
+a:focus-visible,
+button:focus-visible {
+  opacity: 0.8;
+}
+a:focus-visible,
+button:focus-visible {
+  text-decoration: underline;
+}
+a:active,
+button:active {
+  transform: scale(0.96);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

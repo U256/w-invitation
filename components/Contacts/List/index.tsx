@@ -1,8 +1,10 @@
 import { Contacts } from "config";
 import Image from "next/image";
-import waIcon from "public/images/socials/whatsapp.svg";
-import tgIcon from "public/images/socials/telegram.svg";
-import phoneIcon from "public/images/socials/phone.svg";
+import WaIcon from "public/images/socials/whatsapp.svg";
+import TgIcon from "public/images/socials/telegram.svg";
+import PhoneIcon from "public/images/socials/phone.svg";
+import socialsIcon from "public/images/socials/social-media.png";
+
 import styles from "./styles.module.css";
 
 interface Props extends Contacts {
@@ -13,26 +15,23 @@ interface Props extends Contacts {
 }
 
 export function List({ who, wa, tg, phone }: Props) {
-  // TODO: svg as svg
-  //  and link hover-focus-active
-  //  replace font with smth more fun
   return (
     <>
       <p className="text-lg">{who}</p>
       <ul className={styles.ul}>
         <a href={wa} target="_blank">
-          <Image src={waIcon} width={24} height={24} alt=""></Image>
+          <WaIcon width={24} height={24} />
           WhatsApp
         </a>
         {tg && (
           <a href={wa} target="_blank">
-            <Image src={tgIcon} width={24} height={24} alt=""></Image>
+            <TgIcon width={24} height={24} />
             Telegram
           </a>
         )}
         {phone && (
           <a href={`tel:${phone}`}>
-            <Image src={phoneIcon} width={24} height={24} alt=""></Image>
+            <PhoneIcon width={24} height={24} />
             По телефону
           </a>
         )}
