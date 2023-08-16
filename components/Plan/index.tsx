@@ -6,19 +6,22 @@ export function Plan() {
   return (
     <InfoColumns
       id="plan"
-      title="Программа"
+      title={dayjs(DATE).format("DD MMMM YYYY")}
       contentLeft={
         <>
-          <p className="text-1xl font-semibold">{dayjs(DATE).format("DD MMMM YYYY")}</p>
-          <p>12:20 - ЗАГС</p>
-          <p>15:00 - тусаджуса</p>
+          {/* <p className="text-1xl font-semibold">{dayjs(DATE).format("DD MMMM YYYY")}</p> */}
+          <p className="text-1xl font-semibold">12:20</p>
+          <p className="text-sm">Торжественная <br/> регистрация</p>
+          <p className="text-sm">Адмирала Фокина, 25</p>
         </>
       }
       contentRight={
         <>
-          <p>Цвет-любой</p>
-          <p>ул. Клюшкина</p>
-          <p className="text-1xl font-semibold">Владивосток</p>
+          <p className="text-1xl font-semibold">17:00 </p>
+          <p className="text-sm">
+            Праздничный <br /> банкет
+          </p>
+          <p className="text-sm">Маковского, 272</p>
         </>
       }
     />

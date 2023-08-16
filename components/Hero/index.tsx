@@ -9,7 +9,7 @@ dayjs.locale(ru);
 
 export function Hero() {
   return (
-    <section id="meet" className={clsx("block-section", styles.hero)}>
+    <section id="meet" className={clsx("block-section first-section", styles.hero)}>
       <h1 className="text-2xl w-auto line-">
         Приглашаем вас на
         <br />

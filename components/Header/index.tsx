@@ -9,10 +9,9 @@ interface Link {
   link: string;
 }
 const LINKS: Link[] = [
-  { text: "Приглашение", link: "#meet" } /*+*/,
-  { text: "Программа", link: "#plan" } /*+*/,
-  { text: "История", link: "#story" } /*+ Вопросы*/,
-  { text: "Карты", link: "#maps" },
+  { text: "Приглашение", link: "#meet" },
+  { text: "Программа", link: "#plan" },
+  { text: "История", link: "#story" },
   { text: "Контакты", link: "#contacts" },
 ];
 

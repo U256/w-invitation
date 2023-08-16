@@ -5,9 +5,6 @@ import { Contacts } from "components/Contacts";
 import { FinalQuirk } from "components/FinalQuirk";
 import { Story } from "components/Story";
 import { Plan } from "components/Plan";
-import styles from "./page.module.css";
-import dayjs from "dayjs";
-import { DATE } from "config";
 
 interface Props {
   params: {
@@ -21,18 +18,14 @@ interface Props {
 // уникальные приветствия
 // emojis
 
-export default function Main({ params }: Props) {
+export default async function Main({ params }: Props) {
   console.log(params.member);
   return (
-    <main className={clsx("flex flex-col justify-between align-middle", styles.main)}>
+    <main className="flex flex-col justify-between align-middle">
       <Hero />
       <Plan />
       <Story />
       <Contacts title="Контакты" />
-
-      <section id="faq">Ответы на вопросы</section>
-      <section id="schedule">Карты</section>
-
       <FinalQuirk category="coeval" />
     </main>
   );

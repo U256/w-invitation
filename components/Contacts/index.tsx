@@ -15,6 +15,7 @@ interface Props {
 export function Contacts({ showMinimal, className, title }: Props) {
   return (
     <InfoColumns
+      id="contacts"
       before={<Image src={socialsIcon} width={50} height={50} className={styles["title-icon"]} alt="" />}
       title={title}
       className={className}
