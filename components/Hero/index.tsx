@@ -9,7 +9,7 @@ dayjs.locale(ru);
 
 export function Hero() {
   return (
-    <div id="meet" className={clsx("block-section", styles.hero)}>
+    <section id="meet" className={clsx("block-section", styles.hero)}>
       <h1 className="text-2xl w-auto line-">
         Приглашаем вас на
         <br />
@@ -24,24 +24,6 @@ export function Hero() {
         <span className={clsx("block divider", styles.divider)}>и</span>
         <span>Дарья</span>
       </h2>
-      <InfoColumns
-        id="plan"
-        title="Программа"
-        contentLeft={
-          <>
-            <p className="text-1xl font-semibold">{dayjs(DATE).format("DD MMMM YYYY")}</p>
-            <p>12:20 - ЗАГС</p>
-            <p>15:00 - тусаджуса</p>
-          </>
-        }
-        contentRight={
-          <>
-            <p>Цвет-любой</p>
-            <p>ул. Клюшкина</p>
-            <p className="text-1xl font-semibold">Владивосток</p>
-          </>
-        }
-      />
-    </div>
+    </section>
   );
 }

@@ -1,3 +1,4 @@
+// @ts-ignore
 import grape2 from "public/images/grape2.svg?url";
 import Image from "next/image";
 import { getPath } from "helpers/getPath";
@@ -8,9 +9,9 @@ interface Link {
   link: string;
 }
 const LINKS: Link[] = [
-  { text: "Приглашение", link: "#meet" },
-  { text: "Вопросы", link: "#faq" },
-  { text: "Программа", link: "#plan" },
+  { text: "Приглашение", link: "#meet" } /*+*/,
+  { text: "Программа", link: "#plan" } /*+*/,
+  { text: "История", link: "#story" } /*+ Вопросы*/,
   { text: "Карты", link: "#maps" },
   { text: "Контакты", link: "#contacts" },
 ];
