@@ -1,6 +1,5 @@
-import clsx from "clsx";
 import { Hero } from "components/Hero";
-import { members } from "members/data";
+// import { members } from "members/data";
 import { Contacts } from "components/Contacts";
 import { FinalQuirk } from "components/FinalQuirk";
 import { Story } from "components/Story";
@@ -13,7 +12,6 @@ interface Props {
 }
 
 // TODO:
-// replace font with smth more fun
 // картинки мои и даши
 // уникальные приветствия
 // emojis

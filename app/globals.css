@@ -12,12 +12,16 @@
   --clr-content: hsl(106, 19%, 23%);
   --clr-content-sub: hsl(108, 7%, 39%);
 
-  --header-height: 100px;
+  --header-height: 85px;
   --gutter: 16px;
-  font-size: 18px;
-
+  font-size: 17px;
+  font-weight: 500;
+  --max-width: 550px;
+  @media (min-width: 576px) {
+    --header-height: 95px;
+  }
   @media (min-width: 768px) {
-    --header-height: 50px;
+    --header-height: 52px;
     --gutter: 30px;
   }
 }
@@ -74,7 +78,7 @@ body {
   width: 100%;
 
   @media (min-width: 576px) {
-    width: 550px;
+    width: var(--max-width);
     padding-top: 80px;
   }
 }

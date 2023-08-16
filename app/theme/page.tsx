@@ -16,7 +16,7 @@ export default function Theme() {
       </div>
       <div style={{ padding: 50 }}>
         <p>
-          jost
+          main
           <br />
           Приглашаем на свадьбу Дарьи и Алексея. Будем рады видеть вас. friendship000
         </p>

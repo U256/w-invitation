@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import dayjs from "dayjs";
 import ru from "dayjs/locale/ru";
-import { DATE } from "config";
-import { InfoColumns } from "components/InfoColumns";
 import styles from "./styles.module.css";
 
 dayjs.locale(ru);
@@ -10,7 +8,7 @@ dayjs.locale(ru);
 export function Hero() {
   return (
     <section id="meet" className={clsx("block-section first-section", styles.hero)}>
-      <h1 className="text-2xl w-auto line-">
+      <h1 className="text-2xl w-auto">
         Приглашаем вас на
         <br />
         торжественное мероприятие,

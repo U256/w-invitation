@@ -1,0 +1,16 @@
+.nav {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: var(--max-width);
+  font-size: 0.8rem;
+  @media (min-width: 768px) {
+    grid-auto-flow: column;
+    grid-template-columns: unset;
+  }
+  @media (min-width: 576px) {
+    font-size: 1rem;
+  }
+}

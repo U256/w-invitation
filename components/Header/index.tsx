@@ -3,6 +3,7 @@ import grape2 from "public/images/grape2.svg?url";
 import Image from "next/image";
 import { getPath } from "helpers/getPath";
 import { TimeOfDay } from "components/TimeOfDay";
+import styles from "./styles.module.css";
 
 interface Link {
   text: string;
@@ -32,7 +33,7 @@ export function Header() {
           <TimeOfDay />!
         </p>
       ) : (
-        <nav className=" flex flex-wrap justify-center">
+        <nav className={styles.nav}>
           {LINKS.map((l) => (
             <a key={l.text} className="mx-2 my-2 md:mx-3 md:my-0" href={`${path}${l.link}`}>
               {l.text}
