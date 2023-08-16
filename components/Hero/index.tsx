@@ -24,6 +24,9 @@ export function Hero() {
         <span className={clsx("block divider", styles.divider)}>и</span>
         <span>Дарья</span>
       </h2>
+      <span className="absolute rotate-12 right-3 bottom-6" style={{ fontSize: 40 }}>
+        &#128141;
+      </span>
       {/* <span>&#128112;</span>
       <span>&#129333;</span>
       <span>&#128141;</span> */}

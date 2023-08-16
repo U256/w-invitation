@@ -8,6 +8,7 @@ import { DATE } from "config";
 dayjs.extend(relativeTime);
 
 export function Countdown() {
+  // TODO: 'уже!'
   return (
     <section className="text-center p-1 pt-2 text-xl">
       <p className="text-2xl">Осталось:</p>
