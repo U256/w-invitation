@@ -44,3 +44,22 @@
 .divider:after {
   right: 0;
 }
+
+.adornment,
+.adornment2 {
+  position: absolute;
+  fill: var(--clr-accent);
+  opacity: 0.5;
+  height: auto;
+}
+
+.adornment2 {
+  top: 40%;
+  right: 0;
+  width: 60px;
+}
+.adornment {
+  left: 0;
+  top: 90%;
+  width: 80px;
+}

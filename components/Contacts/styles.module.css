@@ -8,3 +8,14 @@
     left: -80px;
   }
 }
+
+.adornment {
+  position: absolute;
+  fill: var(--clr-content-sub);
+  opacity: 0.4;
+  height: auto;
+  top: 0;
+  right: 50px;
+  width: 60px;
+  transform: rotate(-45deg);
+}

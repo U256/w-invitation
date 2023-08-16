@@ -14,7 +14,6 @@ interface Props {
 // TODO:
 // картинки мои и даши
 // уникальные приветствия
-// emojis
 
 export default async function Main({ params }: Props) {
   console.log(params.member);

@@ -1,3 +1,6 @@
+#story {
+  position: relative;
+}
 #story .fancy {
   font-weight: 500;
   width: 176px;
@@ -46,5 +49,19 @@
     color: var(--clr-content-sub);
     font-weight: 200;
     opacity: 0.7;
+  }
+}
+
+.grape1-adornment {
+  position: absolute;
+  fill: var(--clr-accent);
+  opacity: 0.5;
+  height: auto;
+  top: -10px;
+  left: 50%;
+  width: 60px;
+  transform: rotate(90deg) translateY(20%);
+  @media (min-width: 576px) {
+    top: -34px;
   }
 }

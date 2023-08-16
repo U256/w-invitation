@@ -1,8 +1,9 @@
 import "./styles.css";
+import Grape1 from "public/images/grape1.svg";
 
 export function Story() {
   return (
-    <section id="story" className="block-section" style={{ maxWidth: 400 }}>
+    <section id="story" className="block-section" style={{ maxWidth: 450 }}>
       <p className="text-2xl font-medium">Дорогие друзья!</p>
       <p className="mt-2">Жить, любить, чувствовать.</p>
       <p>
@@ -32,6 +33,7 @@ export function Story() {
       <p>Мы будем очень рады, если вы разделите этот счастливый день с нами.</p>
       <p>Увидимся на нашей свадьбе!</p>
       <p className="">❤️</p>
+      <Grape1 className="grape1-adornment" />
     </section>
   );
 }

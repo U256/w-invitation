@@ -74,12 +74,11 @@ body {
 .block-section {
   text-align: center;
   margin: 0 auto;
-  padding: 50px var(--gutter) 0;
+  padding: calc(var(--header-height) + 8px) var(--gutter) 0;
   width: 100%;
 
   @media (min-width: 576px) {
     width: var(--max-width);
-    padding-top: 80px;
   }
 }
 

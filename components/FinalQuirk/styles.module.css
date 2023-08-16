@@ -13,3 +13,19 @@
   height: 150px;
   /* TODO: animation or picture of discoball */
 }
+
+.adornment {
+  position: absolute;
+  fill: var(--clr-content-sub);
+  opacity: 0.4;
+  height: auto;
+  top: -30px;
+  left: 50%;
+  width: 60px;
+  transform: rotate(90deg) translateY(20%);
+
+  @media (min-width: 576px) {
+    width: 40px;
+    top: -14px;
+  }
+}
