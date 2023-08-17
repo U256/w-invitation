@@ -4,6 +4,8 @@ import { Contacts } from "components/Contacts";
 import { FinalQuirk } from "components/FinalQuirk";
 import { Story } from "components/Story";
 import { Plan } from "components/Plan";
+import { UNKNOWN_GUEST } from "config";
+import { getPath } from "helpers/getPath";
 
 interface Props {
   params: {
@@ -13,12 +15,16 @@ interface Props {
 
 // TODO:
 // картинки мои и даши
-// уникальные приветствия 
+// уникальные приветствия
 // данные пользователей - в бдшшку
-// TODO's
+// animation or picture of discoball
+
 
 export default async function Main({ params }: Props) {
-  console.log(params.member);
+  const path = getPath();
+  if (path?.includes(UNKNOWN_GUEST)) {
+    console.log(params.member);
+  }
   return (
     <main className="flex flex-col justify-between align-middle">
       <Hero />
