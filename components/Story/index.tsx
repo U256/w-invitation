@@ -32,7 +32,7 @@ export function Story() {
       </p>
       <p>Мы будем очень рады, если вы разделите этот счастливый день с нами.</p>
       <p>Увидимся на нашей свадьбе!</p>
-      <p className="">❤️</p>
+      <p className="heart text-3xl">❤️</p>
       <Grape1 className="grape1-adornment" />
     </section>
   );

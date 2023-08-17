@@ -13,7 +13,9 @@ interface Props {
 
 // TODO:
 // картинки мои и даши
-// уникальные приветствия
+// уникальные приветствия 
+// данные пользователей - в бдшшку
+// TODO's
 
 export default async function Main({ params }: Props) {
   console.log(params.member);
