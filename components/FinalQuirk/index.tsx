@@ -1,14 +1,13 @@
 import clsx from "clsx";
-import type { Member } from "members/member.type";
 import Grape5 from "public/images/grape5.svg";
 import styles from "./styles.module.css";
+import { getInfoByPath } from "members/getInfoByPath";
+import { getPath } from "helpers/getPath";
 
-interface Props {
-  category: Member["ageCategory"];
-}
-
-export function FinalQuirk({ category }: Props) {
-  const aged = category === "parent";
+export function FinalQuirk() {
+  const path = getPath();
+  const { wayToSay } = getInfoByPath(path);
+  const aged = wayToSay === "respectful";
   return (
     <section className={clsx("block-section relative", styles.quirk)}>
       <p>Долистал{aged && "и"} до конца? </p>

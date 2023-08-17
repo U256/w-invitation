@@ -9,10 +9,14 @@ export function Plan() {
       title={dayjs(DATE).format("DD MMMM YYYY")}
       contentLeft={
         <>
-          {/* <p className="text-1xl font-semibold">{dayjs(DATE).format("DD MMMM YYYY")}</p> */}
           <p className="text-1xl font-semibold">12:20</p>
-          <p className="text-sm">Торжественная <br/> регистрация</p>
-          <p className="text-sm">Адмирала Фокина, 25</p>
+          <p className="text-sm">
+            Торжественная <br /> регистрация
+          </p>
+          <a target="_blank" href="https://go.2gis.com/qqxhb" className="text-xs sm:text-sm pt-2 no-wrap">
+            <span className="underline">​Шкипера Гека, 15</span>
+            &#128205;
+          </a>
         </>
       }
       contentRight={
@@ -21,7 +25,10 @@ export function Plan() {
           <p className="text-sm">
             Праздничный <br /> банкет
           </p>
-          <p className="text-sm">Маковского, 272</p>
+          <a target="_blank" href="https://go.2gis.com/pkfr5f" className="text-xs sm:text-sm pt-2 no-wrap">
+            <span className="underline">Маковского, 272</span>
+            &#128205;
+          </a>
         </>
       }
     />
