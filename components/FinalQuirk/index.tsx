@@ -1,8 +1,10 @@
 import clsx from "clsx";
+import Image from "next/image";
 import Grape5 from "public/images/grape5.svg";
-import styles from "./styles.module.css";
 import { getInfoByPath } from "members/getInfoByPath";
+import disco from "public/images/disco.gif";
 import { getPath } from "helpers/getPath";
+import styles from "./styles.module.css";
 
 export function FinalQuirk() {
   const path = getPath();
@@ -10,10 +12,10 @@ export function FinalQuirk() {
   const aged = wayToSay === "respectful";
   return (
     <section className={clsx("block-section relative", styles.quirk)}>
-      <p>Долистал{aged && "и"} до конца? </p>
-      <p>Держи{aged && "те"} дискошар!</p>
+      <p className="pt-2">Долистал{aged && "и"} до конца? </p>
+      <p>Держи{aged && "те"} диско!</p>
 
-      <span className={styles.discoball}></span>
+      <Image src={disco} width={200} height={200} className={styles.discoball} alt="диско!" />
       <Grape5 className={styles.adornment} />
     </section>
   );

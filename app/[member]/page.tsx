@@ -13,7 +13,6 @@ interface Props {
 // OG preview
 // уникальные приветствия
 // данные пользователей - в бдшшку
-// animation or picture of discoball
 // 100 dvh - fix safari
 
 export default async function Main({ params }: Props) {

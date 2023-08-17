@@ -1,16 +1,15 @@
 .quirk {
   display: grid;
   justify-content: center;
-  margin-bottom: 110px;
+  margin-bottom: var(--footer-height);
 }
 
 .discoball {
   margin-top: 30px;
   display: block;
-  background-color: red;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  background-color: var(--clr-foreground);
+  border-radius: 50% 50% 0 0;
+  padding: 10px;
 }
 
 .adornment {
