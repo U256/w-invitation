@@ -97,6 +97,13 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.footer-override {
+  --footer-h: 77px;
+  height: var(--footer-h);
+  top: calc(100vh - var(--footer-h));
+  top: calc(100dvh - var(--footer-h));
+}
+
 .text-xs {
   font-size: 0.7rem;
   line-height: 1.3rem;

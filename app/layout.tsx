@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { Handjet, Comfortaa, Caveat } from "next/font/google";
 import { Header } from "components/Header";
 import { Countdown } from "components/Countdown";
+import inviteImage from "public/images/invite.png";
 
 const main = Comfortaa({ variable: "--font-main", subsets: ["cyrillic", "latin"] });
 const handjet = Handjet({
@@ -24,6 +25,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "./favicon.png",
   },
+  openGraph: {
+    url: "https://w-invitation.vercel.app",
+    type: "website",
+    title: "Свадьба Алексея и Дарьи",
+    description: "Приглашение на свадьбу",
+    images: [inviteImage.src],
+    siteName: "https://w-invitation.vercel.app",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -32,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={clsx(main.className, main.variable, caveat.variable, handjet.variable)}>
         <Header />
         {children}
-        <footer className="fixed w-full flex justify-center bottom-0 left-0 border-t bg-inherit z-10">
+        <footer className="fixed w-full flex justify-center left-0 border-t bg-inherit z-10 footer-override">
           <Countdown />
         </footer>
       </body>

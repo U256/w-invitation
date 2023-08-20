@@ -10,10 +10,8 @@ interface Props {
 }
 
 // TODO:
-// OG preview
 // уникальные приветствия
 // данные пользователей - в бдшшку
-// 100 dvh - fix safari
 
 export default async function Main({ params }: Props) {
   // const path = getPath();
