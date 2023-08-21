@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={clsx(main.className, main.variable, caveat.variable, handjet.variable)}>
         <Header />
         {children}
-        <footer className="fixed w-full flex justify-center left-0 border-t bg-inherit z-10 footer-override">
+        <footer className="fixed w-full flex justify-center left-0 bottom-0 border-t bg-inherit z-10 footer-override">
           <Countdown />
         </footer>
       </body>

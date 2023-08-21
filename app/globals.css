@@ -100,8 +100,6 @@ body::-webkit-scrollbar-thumb {
 .footer-override {
   --footer-h: 77px;
   height: var(--footer-h);
-  top: calc(100vh - var(--footer-h));
-  top: calc(100dvh - var(--footer-h));
 }
 
 .text-xs {
@@ -114,6 +112,16 @@ body::-webkit-scrollbar-thumb {
 
 .first-section {
   padding-top: calc(var(--header-height) + 16px);
+}
+
+.shimmer {
+  background: #f3e2bf;
+  background-repeat: no-repeat;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: placeholderShimmer 2s infinite linear;
+  background: linear-gradient(to right, #f9f3e5 0%, #fbe4b4 46%, #fbe4b4 54%, #f9f3e5 100%);
 }
 
 @keyframes fancy {
@@ -162,5 +170,13 @@ body::-webkit-scrollbar-thumb {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px 0;
   }
 }
