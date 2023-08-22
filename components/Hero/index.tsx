@@ -16,8 +16,6 @@ export function Hero() {
   const path = getPath();
   const { wayToSay } = getInfoByPath(path);
 
-  console.log({ wayToSay });
-
   return (
     <section id="meet" className={clsx("block-section first-section relative", styles.hero)}>
       <h1 className="text-2xl w-auto relative">
