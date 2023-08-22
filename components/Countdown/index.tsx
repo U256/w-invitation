@@ -5,7 +5,6 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { pickWordCase } from "helpers/pickWordCase";
 import { DATE } from "config";
 import { useEffect, useState } from "react";
-import { useClientInitialized } from "hooks/useClientInittialized";
 dayjs.extend(relativeTime);
 
 // new Date("21 oct 2023 14:00").toLocaleString("ru-RU", {
@@ -33,8 +32,6 @@ export function Countdown() {
     return () => clearInterval(intervalId);
   }, []);
 
-  const onCLient = useClientInitialized();
-
   if (new Date(DATE).getTime() - new Date().getTime() < TEN_MIN) {
     return <section className="text-center p-2 pt-3 text-xl">Уже началось &#128512;</section>;
   }
@@ -42,23 +39,19 @@ export function Countdown() {
   return (
     <section className="text-center p-1 pt-2 text-xl" style={{ width: 315 }}>
       <p className="text-2xl text-center">Осталось:</p>
-      {onCLient ? (
-        <span className="text-xl">
-          {days > 0 && (
-            <>
-              {days} <span className="text-lg">{pickWordCase(days, "день", "дня ", "дней")}</span>&nbsp;
-            </>
-          )}
-          {hours > 0 && (
-            <>
-              {hours} <span className="text-lg">{pickWordCase(hours, "час  ", "часа  ", "часов")}</span>&nbsp;
-            </>
-          )}
-          {minutes} <span className="text-lg">{pickWordCase(minutes, "минута", "минуты", "минут ")}</span>&nbsp;
-        </span>
-      ) : (
-        <span className="shimmer w-full h-6" aria-label="загрузка" />
-      )}
+      <p className="text-xl">
+        {days > 0 && (
+          <>
+            {days} <span className="text-lg">{pickWordCase(days, "день", "дня ", "дней")}</span>&nbsp;
+          </>
+        )}
+        {hours > 0 && (
+          <>
+            {hours} <span className="text-lg">{pickWordCase(hours, "час  ", "часа  ", "часов")}</span>&nbsp;
+          </>
+        )}
+        {minutes} <span className="text-sm">{pickWordCase(minutes, "минута", "минуты", "минут ")}</span>
+      </p>
     </section>
   );
 }
