@@ -7,19 +7,15 @@ import Ring from "public/images/ring.svg";
 import Grape4 from "public/images/grape4.svg";
 import we from "public/images/we.png";
 import styles from "./styles.module.css";
-import { getPath } from "helpers/getPath";
-import { getInfoByPath } from "members/getInfoByPath";
+import { Appeal } from './Appeal';
 
 dayjs.locale(ru);
 
 export function Hero() {
-  const path = getPath();
-  const { wayToSay } = getInfoByPath(path);
-
   return (
     <section id="meet" className={clsx("block-section first-section relative", styles.hero)}>
       <h1 className="text-2xl w-auto relative">
-        Приглашаем {wayToSay === "familiar" ? "тебя" : "вас"}&nbsp;на
+        Приглашаем <Appeal />&nbsp;на
         <br />
         торжественное мероприятие,
         <br />

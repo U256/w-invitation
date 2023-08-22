@@ -1,33 +1,23 @@
 "use client";
 
 import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { pickWordCase } from "helpers/pickWordCase";
 import { DATE } from "config";
-import { useEffect, useState } from "react";
+import { takeTimeSpan } from "helpers/timeSpan";
 dayjs.extend(relativeTime);
 
 // new Date("21 oct 2023 14:00").toLocaleString("ru-RU", {
 //   timeZone: "Asia/Vladivostok",
 // });
-
-const getLeftPeriod = (date: number) => {
-  const left = date - Date.now();
-  return {
-    days: Math.floor(left / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((left % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-    minutes: Math.floor((left % (1000 * 60 * 60)) / (1000 * 60)),
-    seconds: Math.floor((left % (1000 * 60)) / 1000),
-  };
-};
-
 const TEN_MIN = 600000;
 
 export function Countdown() {
-  const [time, setTime] = useState(getLeftPeriod(DATE));
+  const [time, setTime] = useState(takeTimeSpan(DATE));
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTime(getLeftPeriod(DATE));
+      setTime(takeTimeSpan(DATE));
     }, 1000);
     return () => clearInterval(intervalId);
   }, []);

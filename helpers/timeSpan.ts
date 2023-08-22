@@ -1,25 +1,9 @@
-function convertMS(ms: number) {
-  var d, h, m, s;
-  s = Math.floor(ms / 1000);
-  m = Math.floor(s / 60);
-  s = s % 60;
-  h = Math.floor(m / 60);
-  m = m % 60;
-  d = Math.floor(h / 24);
-  h = h % 24;
-  h += d * 24;
-  return h + ":" + m + ":" + s;
+export function takeTimeSpan(ms: number) {
+  const left = ms - Date.now();
+  return {
+    days: Math.floor(left / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((left % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((left % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((left % (1000 * 60)) / 1000),
+  };
 }
-function msToTime(duration: number) {
-  const milliseconds = Math.floor((duration % 1000) / 100);
-  let seconds = Math.floor((duration / 1000) % 60);
-  let minutes = Math.floor((duration / (1000 * 60)) % 60);
-  let hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-
-  hours = hours < 10 ? 0 + hours : hours;
-  minutes = minutes < 10 ? 0 + minutes : minutes;
-  seconds = seconds < 10 ? 0 + seconds : seconds;
-
-  return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-}
-// console.log(msToTime(5585115391));
