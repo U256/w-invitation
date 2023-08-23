@@ -6,9 +6,7 @@ export function useClientInitialized() {
   const typeofWindow = typeof window;
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setTimeout(() => {
-        setOnClient(true);
-      }, 1);
+      setOnClient(true);
     }
   }, [typeofWindow]);
 

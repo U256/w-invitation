@@ -21,7 +21,7 @@ export function List({ who, wa, tg, phone }: Props) {
           WhatsApp
         </a>
         {tg && (
-          <a href={wa} target="_blank">
+          <a href={tg} target="_blank">
             <TgIcon width={24} height={24} />
             Telegram
           </a>
