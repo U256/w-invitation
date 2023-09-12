@@ -9,12 +9,12 @@ export function Plan() {
       title={dayjs(DATE).format("DD MMMM YYYY")}
       contentLeft={
         <>
-          <p className="text-1xl font-semibold">12:20</p>
+          <p className="text-1xl font-semibold">12:40</p>
           <p className="text-sm">
             Торжественная <br /> регистрация
           </p>
-          <a target="_blank" href="https://go.2gis.com/qqxhb" className="text-xs sm:text-sm pt-2 no-wrap">
-            <span className="underline">​Шкипера Гека, 15</span>
+          <a target="_blank" href="https://go.2gis.com/okix2" className="text-xs sm:text-sm pt-2 no-wrap">
+            <span className="underline">Гульбиновича, 3</span>
             &#128205;
           </a>
         </>
